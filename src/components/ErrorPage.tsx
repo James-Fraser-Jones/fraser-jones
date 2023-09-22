@@ -19,13 +19,16 @@ export default function ErrorPage() {
   }
 
   return (
-    <div>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{errorMessage}</i> <br/>
-        <Link to={`/`}>Home</Link> <br/>
-      </p>
+    <div className="font-sans font-medium">
+      <div className="p-4">
+        <Link to={`/`}>
+          <h1 className="text-3xl">Oops!</h1>
+          <h2 className="text-2xl text-paint mt-2">An Error Has Occured</h2>
+        </Link>
+      </div>
+      <div className="p-4">
+        <strong>{errorMessage}</strong>
+      </div>
     </div>
   );
 }

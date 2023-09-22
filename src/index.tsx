@@ -10,7 +10,8 @@ import './index.css';
 
 import App from './components/App/App';
 import ErrorPage from './components/ErrorPage';
-import Projects from './components/Projects';
+import Home from './components/Home';
+import Circuit from './components/Circuit';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "projects/",
-        element: <Projects />,
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "projects/circuit",
+        element: <Circuit />,
       },
     ],
   },

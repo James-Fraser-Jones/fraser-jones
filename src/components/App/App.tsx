@@ -3,12 +3,16 @@ import { Outlet, Link } from "react-router-dom";
 export default function App() {
   return (
     <div className="font-sans font-medium">
-      <h1 className="text-3xl">James Fraser-Jones</h1>
-      <h2 className="text-2xl text-paint">Software Engineer</h2>
-      <Link to={`/`}>Home</Link> <br/>
-      <Link to={`projects/`}>Projects</Link> <br/>
-      <Link to={`projects/circuit`}>Circuit</Link>
-      <Outlet />
+      <div className="bg-paint p-4">
+        <Link to={`/`}>
+          <h1 className="text-3xl">James Fraser-Jones</h1>
+          <h2 className="text-2xl text-white mt-2">Software Engineer</h2>
+          <h3 className="text-xl text-white">London, UK</h3>  
+        </Link>
+      </div>
+      <div className="p-4">
+        <Outlet />
+      </div>
     </div>
   );
 }
