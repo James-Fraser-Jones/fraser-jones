@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <Link className="border-solid border-2 rounded-lg border-paint p-4 inline-block" to={`projects/circuit`}>
+      <Link className="border-solid border-2 rounded-lg border-paint p-4 block" to={`projects/circuit`}>
         <h3 className="text-xl text-paint">
           Circuit
         </h3>
