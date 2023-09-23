@@ -1,6 +1,6 @@
 export async function makePostRequest(data: string): Promise<string> {
   try {
-    const response = await fetch('https://t75lx9rthk.execute-api.eu-north-1.amazonaws.com/reduce', {
+    const response = await fetch('https://yvt2o2z081.execute-api.eu-north-1.amazonaws.com/reduce', {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain',
@@ -21,6 +21,25 @@ export async function makePostRequest(data: string): Promise<string> {
     console.error('Error:', error);
     throw error;
   }
+}
+
+export function downloadTextFile(title: string, data: string) {
+  // Create a Blob containing the text data
+  const blob = new Blob([data], { type: 'text/plain' });
+
+  // Create a download link
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = title;
+
+  // Trigger the download
+  document.body.appendChild(a);
+  a.click();
+
+  // Clean up
+  window.URL.revokeObjectURL(url);
+  document.body.removeChild(a);
 }
 
 const padData = (data: string, top: number, bottom: number, left: number, right: number): string => {
