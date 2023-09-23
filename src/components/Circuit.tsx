@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <div>
-      <textarea className="block w-full border-solid border-2 rounded-lg border-slate-300 focus:border-paint p-4 focus:outline-none font-mono" 
+      <textarea className="block w-full border-solid border-2 rounded-lg border-slate-300 focus:border-paint p-4 focus:outline-none font-mono leading-5 tracking-tight whitespace-pre" 
         id="input" 
         placeholder="Input" 
         cols={30} 
@@ -30,7 +30,7 @@ export default function Contact() {
         value={input}
       />
       <button className="block w-full bg-paint p-4 text-white text-2xl my-4 rounded-lg" onClick={handleClick}>Reduce</button>
-      <textarea className="block w-full border-solid border-2 rounded-lg border-slate-300 focus:border-paint p-4 focus:outline-none font-mono" 
+      <textarea className="block w-full border-solid border-2 rounded-lg border-slate-300 focus:border-paint focus:outline-none font-mono leading-5 tracking-tight whitespace-pre" 
         id="ouput" 
         placeholder="Output" 
         cols={30} 

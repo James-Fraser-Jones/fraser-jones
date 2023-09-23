@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Open Sans'],
-      'mono': ['IBM Plex Mono'],
+      'mono': ['Source Code Pro'],
     },
     extend: {
       colors: {

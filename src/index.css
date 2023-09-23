@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../public/fonts/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../public/fonts/SourceCodePro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
