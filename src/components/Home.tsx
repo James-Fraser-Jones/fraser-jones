@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
-      <div className="bg-paint p-4">
+      <div className="bg-paint p-4 sticky top-0">
         <Link to={`/`}>
           <h1 className="text-3xl text-white">James Fraser-Jones</h1>
           <h2 className="text-2xl text-white mt-2">Software Engineer</h2>
-          <h3 className="text-xl text-white">London, UK</h3>  
+          <h3 className="text-xl text-white">Birmingham, UK</h3>  
         </Link>
       </div>
       <div className="p-4">
