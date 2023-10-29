@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
-import App from './components/App/App';
+import App from './components/App';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Circuit from './components/Circuit';

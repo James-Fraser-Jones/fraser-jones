@@ -5,13 +5,16 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Open Sans'],
-      'mono': ['Source Code Pro'],
+      'sans': ['"Open Sans"', 'sans-serif'],
+      'serif': ['"PT Serif"', 'serif'],
+      'mono': ['"Source Code Pro"', 'monospace'],
+      'cursive': ['"Pacifico"', 'cursive'],
+      'sans2': ['"Poppins"', 'sans-serif'],
     },
     extend: {
       colors: {
         'paint': '#0e8c7f',
-      }
+      },
     },
   },
   plugins: [],
