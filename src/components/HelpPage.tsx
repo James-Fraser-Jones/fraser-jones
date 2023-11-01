@@ -1,8 +1,9 @@
 import Button from "./Button";
+import Content from "./Content";
 
 export default function HelpPage(props: any) {
   return (
-    <div className="p-4 flex flex-col space-y-4">
+    <Content>
       <p>
         Lambda calculus is a mathematical system for expressing computations, based purely on the definition and usage of functions
       </p>
@@ -51,6 +52,6 @@ export default function HelpPage(props: any) {
       <Button className="w-full" onClick={() => props.setPage("input")}>
         Back
       </Button>
-    </div>
+    </Content>
   );
 }

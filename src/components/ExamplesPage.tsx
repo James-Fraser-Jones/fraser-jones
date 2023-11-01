@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Content from "./Content";
 
 export default function ExamplesPage(props: any) {
   const examples = [
@@ -30,7 +31,7 @@ PlusOne Zero`, showTitle: true}
   ]
 
   return (
-    <div className="p-4 flex flex-col space-y-4">
+    <Content>
       {examples.map((item, index) => (
         <Button key={index} className="w-full" onClick={() => props.chooseExample(item.expr)}>
           {item.showTitle ? item.title : item.expr}
@@ -39,6 +40,6 @@ PlusOne Zero`, showTitle: true}
       <Button className="w-full" onClick={() => props.setPage("input")}>
         Back
       </Button>
-    </div>
+    </Content>
   );
 }

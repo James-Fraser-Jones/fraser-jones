@@ -11,11 +11,6 @@ module.exports = {
       'cursive': ['"Pacifico"', 'cursive'],
       'sans2': ['"Poppins"', 'sans-serif'],
     },
-    extend: {
-      colors: {
-        'paint': '#0e8c7f',
-      },
-    },
   },
   plugins: [],
 }

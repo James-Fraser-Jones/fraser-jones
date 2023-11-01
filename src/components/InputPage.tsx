@@ -1,9 +1,10 @@
 import Button from "./Button";
 import Textarea from "./Textarea";
+import Content from "./Content";
 
 export default function InputPage(props: any) {
   return (
-    <div className="p-4 flex flex-col space-y-4">
+    <Content>
       <div className="flex space-x-4">
         <Button className="grow" onClick={() => props.setPage("examples")}>
           Example Inputs
@@ -25,6 +26,6 @@ export default function InputPage(props: any) {
           What is this?
         </Button>
       </div>
-    </div>
+    </Content>
   );
 }

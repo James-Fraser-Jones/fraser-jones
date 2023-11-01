@@ -1,5 +1,6 @@
 import { ChangeEvent, useState } from 'react';
 import { makePostRequest, downloadTextFile } from "../utils";
+
 import Banner from "./Banner";
 import HelpPage from './HelpPage';
 import ExamplesPage from './ExamplesPage';
@@ -54,7 +55,7 @@ export default function Circuit() {
   // https://stackoverflow.com/questions/7060009/css-max-height-remaining-space
   return (
     <div>
-      <Banner heading="Circuit" subHeading="Lambda calculus evaluator" subSubHeading="Diagram generator" />
+      <Banner heading="Circuit" subHeading="Lambda calculus evaluator" subSubHeading="Diagram generator"/>
       { page === "input"    ? <InputPage {...pageProps}/> : 
         page === "examples" ? <ExamplesPage {...pageProps}/> :
         page === "help"     ? <HelpPage {...pageProps}/> : 

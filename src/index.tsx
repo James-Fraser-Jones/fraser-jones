@@ -1,31 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
 import App from './components/App';
 import ErrorPage from './components/ErrorPage';
-import Home from './components/Home';
-import Circuit from './components/Circuit';
+import HomePage from './components/HomePage';
+import Circuit from './components/CircuitPage';
+import Frequency from './components/FrequencyPage';
+
+import { ThemeContext, themes } from './themes';
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
+  { path: "/"
+  , element: <App />
+  , errorElement: 
+      <ThemeContext.Provider value={themes.error}>
+        <ErrorPage/>
+      </ThemeContext.Provider>
+  , children: [
+      { path: ""
+      , element: <HomePage />
       },
-      {
-        path: "projects/circuit",
-        element: <Circuit />,
+      { path: "projects/circuit"
+      , element: 
+          <ThemeContext.Provider value={themes.circuit}>
+            <Circuit />
+          </ThemeContext.Provider>
+      },
+      { path: "projects/frequency"
+      , element: 
+          <ThemeContext.Provider value={themes.frequency}>
+            <Frequency />
+          </ThemeContext.Provider>
       },
     ],
   },

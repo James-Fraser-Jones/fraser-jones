@@ -1,6 +1,8 @@
 import { isRouteErrorResponse, useRouteError, Link } from "react-router-dom";
+import { ThemeContext } from "../themes";
 
 export default function ErrorPage() {
+
   const error = useRouteError();
   console.error(error);
 
@@ -19,16 +21,20 @@ export default function ErrorPage() {
   }
 
   return (
-    <div className="font-sans font-medium">
-      <div className="p-4">
-        <Link to={`/`}>
-          <h1 className="text-3xl">Oops!</h1>
-          <h2 className="text-2xl text-paint mt-2">An Error Has Occured</h2>
-        </Link>
-      </div>
-      <div className="p-4">
-        <strong>{errorMessage}</strong>
-      </div>
-    </div>
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <div className="font-sans font-medium">
+          <div className="p-4">
+            <Link to={`/`}>
+              <h1 className="text-3xl">Oops!</h1>
+              <h2 style={{color: theme.primary}}>An Error Has Occured</h2>
+            </Link>
+          </div>
+          <div className="p-4">
+            <strong>{errorMessage}</strong>
+          </div>
+        </div>
+      )}
+    </ThemeContext.Consumer>
   );
 }
